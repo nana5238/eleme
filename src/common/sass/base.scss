@@ -1,0 +1,36 @@
+// function border1px($color) {
+//  	position: relative;
+//  	&:after{
+//  		display:block;
+//  		position: absolute;
+//  		left: 0;
+//  		bottom: 0;
+//  		conten:'';
+//  		border-top: 1px solid $color;
+//  	}
+// }
+body,html{
+	line-height: 1;
+	font-weight: 200;
+	font-family: 'PingFang SC';
+}
+
+.clearfix{
+	display:inline-block;
+	&:after{
+		display:block;
+		content:'';
+		height: 0;
+		line-height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+}
+
+
+
+@mixin bgimage($url) { 
+	background-image:url($url + "@2x.png");
+	 /* @media (-webkit-min-device-pixed-ratio:3),(min-device-pixed-ratio:3)
+	 	background-image:url($url + "@3x.png");  */
+}
